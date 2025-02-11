@@ -8,6 +8,7 @@ Receipt Processor is a Spring Boot application that processes receipts by applyi
 - [Prerequisites](#prerequisites)
 - [Using Docker](#using-docker)
 - [API Documentation](#api-documentation)
+- [Accessing the code](#Accessing-the-code)
 - [Testing](#testing)
 - [License](#license)
 
@@ -59,7 +60,7 @@ docker run -p 8080:8080 csalazar24/receipt-processor:latest
 
 Once running, your application will be accessible at http://localhost:8080.
 
-### API Documentation
+## API Documentation
 
 Open your browser and navigate to `http://localhost:8080/swagger-ui/index.html` to view the interactive API documentation.
 
