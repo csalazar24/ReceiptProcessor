@@ -1,6 +1,6 @@
 # Receipt Processor
 
-Receipt Processor is a Spring Boot application that processes receipts by applying business rules to calculate points. It provides a RESTful API for submitting receipts, processing them, and retrieving the awarded points.
+Receipt Processor is a Java Spring Boot application that processes receipts by applying business rules to calculate points. It provides a RESTful API for submitting receipts, processing them, and retrieving the awarded points.
 
 ## Table of Contents
 
