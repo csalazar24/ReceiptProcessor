@@ -24,24 +24,38 @@ public class ReceiptServiceImpl implements ReceiptService{
     private static final LocalTime TIME_BONUS_WINDOW_START = LocalTime.of(14, 0);
     private static final LocalTime TIME_BONUS_WINDOW_END = LocalTime.of(16, 0);
 
-    // In-memory storage for receipt IDs and points
+    // Storing IDs and Points in a HashMap (In-Memory)
     private final Map<String, Integer> pointsByReceiptId = new HashMap<>();
 
     public String processReceipt(Receipt receipt){
-        int points = calculatePoints(receipt);
+
+        if (receipt == null) {
+            throw new IllegalArgumentException("Receipt must not be null");
+        }
+
+        Integer points = (Integer) calculatePoints(receipt);
         String id = UUID.randomUUID().toString();
         pointsByReceiptId.put(id, points);
+
         return id;
     }
 
     public int getPoints(String id){
-        return pointsByReceiptId.get(id);
+
+        if(pointsByReceiptId.containsKey(id)){
+            return pointsByReceiptId.get(id);
+        }
+        else {
+            throw new IllegalArgumentException("No receipt found for that ID.");
+        }
+
     }
 
     private int calculatePoints(Receipt receipt){
 
         int points = 0;
-        //Using BigDecimal for monetary calculations instead of double to avoid precision issues with decimals.
+
+        //Using BigDecimal for monetary calculations instead of a double to avoid precision issues with decimals.
         BigDecimal total = new BigDecimal(receipt.total());
 
         // 1. One point for every alphanumeric character in the retailer name.
@@ -88,6 +102,7 @@ public class ReceiptServiceImpl implements ReceiptService{
     }
 
     private int calculateItemBonusPoints(Receipt receipt) {
+
         return receipt.items().stream()
                 .filter(item -> item.shortDescription().trim().length() % 3 == 0)
                 .mapToInt(item -> {
@@ -97,6 +112,7 @@ public class ReceiptServiceImpl implements ReceiptService{
                     return bonus.intValue();
                 })
                 .sum();
+
     }
 
     private int calculateOddDayPoints(Receipt receipt) {
