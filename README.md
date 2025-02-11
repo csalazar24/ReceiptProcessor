@@ -4,13 +4,27 @@ Receipt Processor is a Spring Boot application that processes receipts by applyi
 
 ## Table of Contents
 
+- [Accessing the code](#Accessing-the-code)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Using Docker](#using-docker)
 - [API Documentation](#api-documentation)
-- [Accessing the code](#Accessing-the-code)
 - [Testing](#testing)
-- [License](#license)
+
+## Accessing the code
+The source code of this application can be found in this repository within the following path: src/main/java/com/example/ReceiptProcessor
+Within this directory, you'll find several key packages:
+- **Controller:**
+  This package contains the REST controllers that handle HTTP requests and responses. It defines the API endpoints for submitting receipts for processing and retrieving the awarded points.
+
+- **Service:** 
+  This package contains the business logic of the application. It includes service interfaces and their implementations that process receipts by applying the defined rules to calculate points.
+
+- **Model:**  
+This package contains the domain models (POJOs or Java records) that represent the structure of receipts and items. These classes define the schema used for JSON serialization and deserialization.
+
+- **Exceptions:**  
+This package contains custom exception classes and global exception handlers that manage error conditions. These classes ensure that meaningful error responses are returned when issues occur during receipt processing.
 
 ## Features
 
@@ -64,22 +78,7 @@ Once running, your application will be accessible at http://localhost:8080.
 
 Open your browser and navigate to `http://localhost:8080/swagger-ui/index.html` to view the interactive API documentation.
 
-## Accessing the code
-The source code of this application can be found in this repository within the following path: src/main/java/com/example/ReceiptProcessor
-Within this directory, you'll find several key packages:
-- **Controller:**
-  This package contains the REST controllers that handle HTTP requests and responses. It defines the API endpoints for submitting receipts for processing and retrieving the awarded points.
-
-- **Service:** 
-  This package contains the business logic of the application. It includes service interfaces and their implementations that process receipts by applying the defined rules to calculate points.
-
-- **Model:**  
-This package contains the domain models (POJOs or Java records) that represent the structure of receipts and items. These classes define the schema used for JSON serialization and deserialization.
-
-- **Exceptions:**  
-This package contains custom exception classes and global exception handlers that manage error conditions. These classes ensure that meaningful error responses are returned when issues occur during receipt processing.
-
-### Testing
+## Testing
 
 While the Docker container is the primary way to run and test the application, the project also includes unit and integration tests. To run tests locally (if needed), you can execute:
 
