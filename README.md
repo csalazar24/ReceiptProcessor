@@ -59,21 +59,11 @@ docker run -p 8080:8080 csalazar24/receipt-processor:latest
 
 Once running, your application will be accessible at http://localhost:8080.
 
-## Verifying the Application
-
-### API Endpoints
-
-- **Submit a Receipt:**  
-  Send a POST request to `http://localhost:8080/receipts/process` with a valid receipt JSON.
-
-- **Retrieve Points:**  
-  Send a GET request to `http://localhost:8080/receipts/{id}/points` to get the points for the processed receipt.
-
 ### API Documentation
 
 Open your browser and navigate to `http://localhost:8080/swagger-ui/index.html` to view the interactive API documentation.
 
-### Accessing the code
+## Accessing the code
 The source code of this application can be found in this repository within the following path: src/main/java/com/example/ReceiptProcessor
 Within this directory, you'll find several key packages:
 - **Controller:**
@@ -87,7 +77,6 @@ This package contains the domain models (POJOs or Java records) that represent t
 
 - **Exceptions:**  
 This package contains custom exception classes and global exception handlers that manage error conditions. These classes ensure that meaningful error responses are returned when issues occur during receipt processing.
-
 
 ### Testing
 
