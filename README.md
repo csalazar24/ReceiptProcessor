@@ -31,7 +31,7 @@ Receipt Processor is a Spring Boot application that processes receipts by applyi
   This project uses Swagger/OpenAPI to interact with the endpoints.
 
 - **Dockerized Application:**  
-  Easily deploy the application using Docker for consistent testing across environments.
+  This application has been dockerized and can be pulled directly from Docker Hub.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Receipt Processor is a Spring Boot application that processes receipts by applyi
 
 You can pull and run the Docker container directly from Docker Hub. This allows you to test the application without having to run it locally.
 
-## Pull the Docker Image
+### Pull the Docker Image
 
 Pull the latest image from Docker Hub using the following command:
 
@@ -51,7 +51,7 @@ Pull the latest image from Docker Hub using the following command:
 docker pull csalazar24/receipt-processor:latest
 ```
 
-## Run the Docker Container.
+### Run the Docker Container.
 
 ```bash
 docker run -p 8080:8080 csalazar24/receipt-processor:latest
