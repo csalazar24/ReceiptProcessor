@@ -21,10 +21,10 @@ Within this directory, you'll find several key packages:
   This package contains the business logic of the application. It includes service interfaces and their implementations that process receipts by applying the defined rules to calculate points.
 
 - **Model:**  
-This package contains the domain models (POJOs or Java records) that represent the structure of receipts and items. These classes define the schema used for JSON serialization and deserialization.
+This package contains the domain models as Java records that represent the structure of receipts and items. These classes define the schema used for JSON serialization and deserialization.
 
 - **Exceptions:**  
-This package contains custom exception classes and global exception handlers that manage error conditions. These classes ensure that meaningful error responses are returned when issues occur during receipt processing.
+This package contains a global exception handler that manages error conditions. These classes ensure that meaningful error responses are returned when issues occur during receipt processing.
 
 ## Features
 
@@ -72,7 +72,7 @@ docker pull csalazar24/receipt-processor:latest
 docker run -p 8080:8080 csalazar24/receipt-processor:latest
 ```
 
-Once running, your application will be accessible at http://localhost:8080.
+Once running, the application will be accessible at http://localhost:8080.
 
 ## API Documentation
 
