@@ -90,6 +90,6 @@ mvn test
 This will run all tests and report any failures.
 
 
-This exercise is very well designed and I really enjoyed building!
+Kudos! This exercise is very well designed and I really enjoyed building it!
 
 
