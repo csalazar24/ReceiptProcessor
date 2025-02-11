@@ -1,0 +1,4 @@
+com\example\ReceiptProcessor\ReceiptProcessorApplicationTests.class
+com\example\ReceiptProcessor\Controller\ReceiptControllerUnitTest.class
+com\example\ReceiptProcessor\Controller\ReceiptControllerIntegrationTest.class
+com\example\ReceiptProcessor\Service\ReceiptServiceImplTest.class

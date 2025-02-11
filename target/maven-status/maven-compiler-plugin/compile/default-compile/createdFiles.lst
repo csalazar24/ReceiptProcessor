@@ -1,0 +1,7 @@
+com\example\ReceiptProcessor\Model\Item.class
+com\example\ReceiptProcessor\Service\ReceiptService.class
+com\example\ReceiptProcessor\Model\Receipt.class
+com\example\ReceiptProcessor\Service\ReceiptServiceImpl.class
+com\example\ReceiptProcessor\Exceptions\GlobalExceptionHandler.class
+com\example\ReceiptProcessor\Controller\ReceiptController.class
+com\example\ReceiptProcessor\ReceiptProcessorApplication.class
