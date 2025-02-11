@@ -16,10 +16,10 @@ The source code of this application can be found in this repository within the f
 
 Within this directory, you'll find several key packages:
 - **Controller:**
-  This package contains the REST controllers that handle HTTP requests and responses. It defines the API endpoints for submitting receipts for processing and retrieving the awarded points.
+  This package contains the REST controllers that handle HTTP requests and responses. It defines the API endpoints for submitting receipts, processing, and retrieving the awarded points.
 
 - **Service:** 
-  This package contains the business logic of the application. It includes service interfaces and their implementations that process receipts by applying the defined rules to calculate points.
+  This package contains the business logic of the application. It includes service a interface and its implementation that processes receipts by applying the defined rules to calculate points.
 
 - **Model:**  
 This package contains the domain models as Java records that represent the structure of receipts and items. These classes define the schema used for JSON serialization and deserialization.
