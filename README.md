@@ -12,7 +12,7 @@ Receipt Processor is a Spring Boot application that processes receipts by applyi
 - [Testing](#testing)
 
 ## Accessing the code
-The source code of this application can be found in this repository within the following path: src/main/java/com/example/ReceiptProcessor
+The source code of this application can be found in this repository within the following path: `src/main/java/com/example/ReceiptProcessor`
 Within this directory, you'll find several key packages:
 - **Controller:**
   This package contains the REST controllers that handle HTTP requests and responses. It defines the API endpoints for submitting receipts for processing and retrieving the awarded points.
